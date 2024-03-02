@@ -1,0 +1,61 @@
+.layout {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg {
+    width: 60%;
+    height: 100vh;
+}
+
+.bg-image {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    height: 72%;
+    width: auto;
+    transform: translate(-50%, -50%);
+    z-index: -3;
+}
+
+.bg div {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 60%;
+    transform: skewX(10deg);
+    z-index: -2;
+    background-color: var(--white);
+}
+
+.dev-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 90%;
+    z-index: -1;
+}
+
+.dev-image img {
+    height: 100%;
+    min-width: fit-content;
+}
+
+.heading {
+    color: var(--white);
+}
+
+@media screen and (max-width) {
+    
+}

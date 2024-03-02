@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /*Colors*/
+  /*Primary*/
+  --purple-9: #29154D;
+  --purple-8: #432876;
+  --purple-7: #5E3A9E;
+
+  /*Secondary*/
+  --blue-9: #0B273D;
+  --blue-8: #15476D;
+
+  --white: white;
+
+  /*font Sizes*/
+  --display-large-1200: 69px;
+  --display-large-576: 51px;
+  --display-large-0:41px;
+  --display-small-1200:57px;
+  --display-small-576:44px;
+  --display-small-0:36px;
+  /*Font Weight*/
+  --heavy-1200: bolder;
+  --heavy-576: bold;
+
+
+}
+
+body {
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--purple-9);
+}
+
+.isolate {
+  isolation: isolate;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.h-large {
+  font-size: var(--display-large-1200);
+  font-weight: var(--heavy-1200);
+  font-family: "Source Sans 3", sans-serif;
+  letter-spacing: 0;
+}
+
+
+@media screen and (max-width:1400px) {
+  .h-large {
+    font-size: var(--display-large-576);
+    font-weight: var(--heavy-576);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .h-large {
+    font-size: var(--display-small-0);
+
+  }
+}
