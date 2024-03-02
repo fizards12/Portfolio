@@ -5,10 +5,18 @@
     border-radius: 4px;
     font-family: "Source Sans 3", sans-serif;
     font-weight: var(--heavy-576);
-    font-size: 18pt;
+    font-size: 18px;
     border: 0;
     line-height: 28px;
     cursor: pointer;
+}
+
+.btn-lg{
+    padding: 16px 32px;
+}
+
+.btn-md{
+    padding: 12px 24px;
 }
 
 .btn:hover {
@@ -28,3 +36,4 @@
     background-color: inherit;
     color: var(--white);
 }
+

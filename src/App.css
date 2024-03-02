@@ -11,23 +11,53 @@
   --purple-7: #5E3A9E;
 
   /*Secondary*/
+  --blue-10: #00070C;
   --blue-9: #0B273D;
   --blue-8: #15476D;
 
   --white: white;
 
   /*font Sizes*/
+
+  /*Display Large Font*/
   --display-large-1200: 69px;
+  --large-line-height-1200: 76px;
   --display-large-576: 51px;
-  --display-large-0:41px;
-  --display-small-1200:57px;
-  --display-small-576:44px;
-  --display-small-0:36px;
+  --large-line-height-576: 56px;
+  --display-large-0: 41px;
+  --large-line-height-0: 48px;
+
+
+  /*Display Small Font*/
+  --display-small-1200: 57px;
+  --small-line-height-1200: 64px;
+  --display-small-576: 44px;
+  --small-line-height-576: 48px;
+  --display-small-0: 36px;
+  --small-line-height-0: 40px;
+
+
+  /*H1 Font*/
+  --h1-1200: 48px;
+  --h1-line-height-1200: 52px;
+  --h1-576: 38px;
+  --h1-line-height-576: 44px;
+  --h1-0: 32px;
+  --h1-line-height-0: 36px;
+  
+  
+  /*H3 Font*/
+  --h3-1200: 33px;
+  --h3-line-height-1200: 36px;
+  --h3-576: 28px;
+  --h3-line-height-576: 32px;
+  --h3-0: 26px;
+  --h3-line-height-0: 32px;
+  
   /*Font Weight*/
   --heavy-1200: bolder;
   --heavy-576: bold;
-
-
+  --heavy-0: 600;
 }
 
 body {
@@ -44,6 +74,8 @@ body {
   background-color: var(--purple-9);
 }
 
+
+
 .isolate {
   isolation: isolate;
 }
@@ -53,23 +85,71 @@ body {
 }
 
 .h-large {
-  font-size: var(--display-large-1200);
+  font-size: var(--display-large-576);
   font-weight: var(--heavy-1200);
   font-family: "Source Sans 3", sans-serif;
   letter-spacing: 0;
+  padding: 5px;
+  line-height: var(--large-line-height-1200);
 }
+
+.glassy-bg[fill="purple"] {
+
+  background-color: rgba(15, 3, 36, 0.5);
+}
+
+.glassy-bg[fill="blue"] {
+  background-color: rgba(0, 7, 12, 0.7);
+}
+
+.round {
+  border-radius: 30px;
+}
+
+
+a.active{
+  scale: 1.1;
+  font-weight: var(--heavy-1200);
+}
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width:1400px) {
   .h-large {
     font-size: var(--display-large-576);
     font-weight: var(--heavy-576);
+    line-height: var(--large-line-height-576);
   }
 }
 
 @media screen and (max-width: 768px) {
   .h-large {
     font-size: var(--display-small-0);
+    font-weight: var(--heavy-0);
+    line-height: var(--small-line-height-0);
+  }
+}
 
+@media screen and (max-width: 576px) {
+  .h-large {
+    font-size: var(--h1-0);
+    line-height: var(--h1-line-height-0);
+  }
+}
+
+
+@media screen and (min-width: 1280px) {
+
+  .glassy-bg[fill="blue"],
+  .glassy-bg[fill="purple"] {
+    background-color: unset;
   }
 }

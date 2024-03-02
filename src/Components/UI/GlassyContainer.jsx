@@ -1,9 +1,9 @@
 import React from 'react'
 
-const GlassyContainer = () => {
+const GlassyContainer = ({children, fill, className}) => {
   return (
-    <div className=' container'>
-
+    <div fill={fill || "purple"} className={' w-fit glassy-bg p-6 round ' + (className || "")}>
+      {children}
     </div>
   )
 }

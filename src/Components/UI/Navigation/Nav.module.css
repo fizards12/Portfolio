@@ -1,0 +1,8 @@
+.nav{
+    background-color: var(--blue-10);
+}
+
+.heading{
+    font-size: var(--h3-1200);
+    font-weight: var(--heavy-1200);
+}

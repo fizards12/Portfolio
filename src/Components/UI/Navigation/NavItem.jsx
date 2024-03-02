@@ -1,9 +1,23 @@
-import React from 'react'
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-const NavItem = () => {
+const NavItem = ({ className,pendingClass,activeClass, children, style = {}, ...props }) => {
   return (
-    <div>NavItem</div>
-  )
-}
+    <li style={style} className={`${className || ""}`}>
+      <NavLink
+        {...props}
+        className={({ isActive, isPending }) =>
+          isActive
+            ? activeClass || "active"
+            : isPending
+            ? pendingClass || "pending"
+            : ""
+        }
+      >
+        {children}
+      </NavLink>
+    </li>
+  );
+};
 
-export default NavItem
+export default NavItem;
