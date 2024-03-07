@@ -6,6 +6,7 @@
 :root {
   /*Colors*/
   /*Primary*/
+  --purple-9-5: #1c0c38;
   --purple-9: #29154D;
   --purple-8: #432876;
   --purple-7: #5E3A9E;
@@ -44,8 +45,8 @@
   --h1-line-height-576: 44px;
   --h1-0: 32px;
   --h1-line-height-0: 36px;
-  
-  
+
+
   /*H3 Font*/
   --h3-1200: 33px;
   --h3-line-height-1200: 36px;
@@ -53,15 +54,34 @@
   --h3-line-height-576: 32px;
   --h3-0: 26px;
   --h3-line-height-0: 32px;
-  
+
+  /*H4 Font*/
+  --h4-1200: 28px;
+  --h4-line-height-1200: 32px;
+  --h4-576: 24px;
+  --h4-line-height-576: 28px;
+  --h4-0: 23px;
+  --h4-line-height-0: 24px;
+
+  /*Link Fonts*/
+  --lnk-large: 20px;
+  --lnk-line-height-large: 28px;
+  --lnk-medium: 18px;
+  --lnk-line-height-meidum: 24px;
+  --lnk-small: 14px;
+  --lnk-line-height-small: 20px;
+
+
+
   /*Font Weight*/
-  --heavy-1200: bolder;
-  --heavy-576: bold;
-  --heavy-0: 600;
+  --heavy-1200: 700;
+  --heavy-576: 600;
+  --heavy-0: 500;
 }
 
 body {
   margin: 0;
+  font-family: "Source Sans 3";
 }
 
 html,
@@ -107,10 +127,21 @@ body {
 }
 
 
-a.active{
-  scale: 1.1;
-  font-weight: var(--heavy-1200);
+a.lnk {
+  font-size: var(--lnk-large);
+  line-height: var(--lnk-line-height-large);
+  color: var(--white);
 }
+
+
+a.lnk:hover {
+  font-weight: var(--heavy-0);
+}
+
+.lnk.active, .lnk.active:hover {
+  font-weight: var(--heavy-576);
+}
+
 
 
 

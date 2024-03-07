@@ -4,6 +4,7 @@ import Home from "./Pages/Home/Home";
 import "./App.css";
 import About from "./Pages/About/About";
 import { action as homeAction } from "./Pages/Home/actionAndLoader";
+import Skills from "./Pages/Skills/Skills";
 
 function App() {
   const router = createBrowserRouter([
@@ -13,9 +14,13 @@ function App() {
       children: [
         { index: true, element: <Home />,action: homeAction},
         {
-          path: "/about-me",
+          path: "about-me",
           element: <About />,
         },
+        {
+          path:"skills",
+          element:<Skills/>
+        }
       ],
     },
   ]);
