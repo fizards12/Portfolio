@@ -5,7 +5,6 @@
     border-radius: 4px;
     font-family: "Source Sans 3", sans-serif;
     font-weight: var(--heavy-576);
-    font-size: 18px;
     border: 0;
     line-height: 28px;
     cursor: pointer;
@@ -13,10 +12,13 @@
 
 .btn-lg{
     padding: 16px 32px;
+    font-size: var(--lnk-large);
+    line-height: var(--lnk-line-height-large);
 }
 
 .btn-md{
     padding: 12px 24px;
+    font-size: var(--lnk-small);
 }
 
 .btn:hover {

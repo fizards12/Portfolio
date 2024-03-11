@@ -1,5 +1,5 @@
 import React from "react";
-import BackgroundImage from "./BackgroundImage";
+import BackgroundImage from "../UI/BackgroundImage";
 import BgDiamond from "../../assets/Diamond.svg";
 import Background from "./Background";
 import { motion } from "framer-motion";

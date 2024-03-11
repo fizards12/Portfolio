@@ -1,18 +1,36 @@
-.nav{
+.nav {
     background-color: var(--blue-10);
 }
 
-.heading{
-    color:var(--white);
+.heading {
+    color: var(--white);
     font-size: var(--h4-576);
     font-weight: var(--heavy-576);
     font-family: "Source Sans 3";
 }
 
-@media screen and (max-width:1200px) {
-    .heading{
+a.lnk {
+    font-size: var(--lnk-large);
+    line-height: var(--lnk-line-height-large);
+    color: var(--white);
+    transition: scale 0.3s linear;
+}
+
+
+.lnk.active,
+.lnk.active:hover {
+    font-weight: var(--heavy-1200);
+}
+
+@media screen and (max-width:1024px) {
+    .heading {
         font-size: var(--h4-0);
         font-weight: var(--heavy-0);
-        
+
+    }
+
+    .lnk.active,
+    .lnk.active:hover {
+        background-color: var(--blue-8);
     }
 }

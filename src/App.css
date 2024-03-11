@@ -8,8 +8,10 @@
   /*Primary*/
   --purple-9-5: #1c0c38;
   --purple-9: #29154D;
+  --purple-8-5: #361F61;
   --purple-8: #432876;
   --purple-7: #5E3A9E;
+  --purple-3: #BE9FF6;
 
   /*Secondary*/
   --blue-10: #00070C;
@@ -18,10 +20,14 @@
 
   --white: white;
 
-  /*font Sizes*/
 
-  /*Display Large Font*/
-  --display-large-1200: 69px;
+  /*Linear Colors*/
+
+  --gradient-color-1: linear-gradient(142deg, #FE315D 22.31%, #F63462 26.22%, #DF3A71 32.08%, #C24383 38.91%, #AD4A91 50.63%, #755BB4 76.02%, #1D76ED 112.15%, #087CFA 119.97%)
+    /*font Sizes*/
+
+    /*Display Large Font*/
+    --display-large-1200: 69px;
   --large-line-height-1200: 76px;
   --display-large-576: 51px;
   --large-line-height-576: 56px;
@@ -66,7 +72,7 @@
   /*Link Fonts*/
   --lnk-large: 20px;
   --lnk-line-height-large: 28px;
-  --lnk-medium: 18px;
+  --lnk-medium: 16px;
   --lnk-line-height-meidum: 24px;
   --lnk-small: 14px;
   --lnk-line-height-small: 20px;
@@ -88,6 +94,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -127,20 +134,7 @@ body {
 }
 
 
-a.lnk {
-  font-size: var(--lnk-large);
-  line-height: var(--lnk-line-height-large);
-  color: var(--white);
-}
 
-
-a.lnk:hover {
-  font-weight: var(--heavy-0);
-}
-
-.lnk.active, .lnk.active:hover {
-  font-weight: var(--heavy-576);
-}
 
 
 
