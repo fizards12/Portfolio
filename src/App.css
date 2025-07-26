@@ -1,88 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   /*Colors*/
-  /*Primary*/
-  --purple-9-5: #1c0c38;
-  --purple-9: #29154D;
-  --purple-8-5: #361F61;
-  --purple-8: #432876;
-  --purple-7: #5E3A9E;
-  --purple-3: #BE9FF6;
-
-  /*Secondary*/
-  --blue-10: #00070C;
-  --blue-9: #0B273D;
-  --blue-8: #15476D;
-
-  --white: white;
-
-
+  --btn-color: var(--s);
   /*Linear Colors*/
+  --gradient-color-1: linear-gradient(
+    142deg,
+    #fe315d 22.31%,
+    #f63462 26.22%,
+    #df3a71 32.08%,
+    #c24383 38.91%,
+    #ad4a91 50.63%,
+    #755bb4 76.02%,
+    #1d76ed 112.15%,
+    #087cfa 119.97%
+  );
+}
+@layer components {
 
-  --gradient-color-1: linear-gradient(142deg, #FE315D 22.31%, #F63462 26.22%, #DF3A71 32.08%, #C24383 38.91%, #AD4A91 50.63%, #755BB4 76.02%, #1D76ED 112.15%, #087CFA 119.97%)
-    /*font Sizes*/
+  .btn {
+    @apply px-8 py-4 rounded-md font-heavy-576 cursor-pointer;
+  }
+  .btn-lg {
+    @apply px-8 py-4 text-lnk-lg;
+  }
+  .btn-md {
+    @apply px-6 py-3 text-lnk-md;
+  }
+  .btn-sm {
+    @apply px-4 py-2 text-lnk-sm;
+  }
+  
+  .btn-primary:hover {
+    --btn-color: var(--s);
+  }
 
-    /*Display Large Font*/
-    --display-large-1200: 69px;
-  --large-line-height-1200: 76px;
-  --display-large-576: 51px;
-  --large-line-height-576: 56px;
-  --display-large-0: 41px;
-  --large-line-height-0: 48px;
+  .btn-secondary:hover {
+    --btn-color: var(--p);
+  }
+  
 
+  .bg-gradient-1 {
+    background: var(--gradient-color-1);
+  }
 
-  /*Display Small Font*/
-  --display-small-1200: 57px;
-  --small-line-height-1200: 64px;
-  --display-small-576: 44px;
-  --small-line-height-576: 48px;
-  --display-small-0: 36px;
-  --small-line-height-0: 40px;
-
-
-  /*H1 Font*/
-  --h1-1200: 48px;
-  --h1-line-height-1200: 52px;
-  --h1-576: 38px;
-  --h1-line-height-576: 44px;
-  --h1-0: 32px;
-  --h1-line-height-0: 36px;
-
-
-  /*H3 Font*/
-  --h3-1200: 33px;
-  --h3-line-height-1200: 36px;
-  --h3-576: 28px;
-  --h3-line-height-576: 32px;
-  --h3-0: 26px;
-  --h3-line-height-0: 32px;
-
-  /*H4 Font*/
-  --h4-1200: 28px;
-  --h4-line-height-1200: 32px;
-  --h4-576: 24px;
-  --h4-line-height-576: 28px;
-  --h4-0: 23px;
-  --h4-line-height-0: 24px;
-
-  /*Link Fonts*/
-  --lnk-large: 20px;
-  --lnk-line-height-large: 28px;
-  --lnk-medium: 16px;
-  --lnk-line-height-meidum: 24px;
-  --lnk-small: 14px;
-  --lnk-line-height-small: 20px;
-
-
-
-  /*Font Weight*/
-  --heavy-1200: 700;
-  --heavy-576: 600;
-  --heavy-0: 500;
+  .text-gradient-1 {
+    background: var(--gradient-color-1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .btn-text {
+    @apply bg-transparent border-0 text-[oklch(var(--btn-color))];
+  }
+  
+  .btn-text:hover {
+    @apply bg-transparent;
+  }
 }
 
 body {
@@ -93,15 +71,12 @@ body {
 html,
 body {
   width: 100%;
-  height: 100%;
-  overflow-x: hidden;
+  @apply overflow-x-hidden;
 }
 
 body {
-  background-color: var(--purple-9);
+  @apply bg-primary-9;
 }
-
-
 
 .isolate {
   isolation: isolate;
@@ -112,16 +87,13 @@ body {
 }
 
 .h-large {
-  font-size: var(--display-large-576);
-  font-weight: var(--heavy-1200);
-  font-family: "Source Sans 3", sans-serif;
-  letter-spacing: 0;
-  padding: 5px;
-  line-height: var(--large-line-height-1200);
+  @apply text-dis-lg-576 font-heavy-1200 font-['Source_Sans_3',_sans-serif] tracking-normal p-[5px];
+  @apply max-xl:font-heavy-576;
+  @apply max-md:text-dis-sm-0 font-heavy-0;
+  @apply max-sm:text-dis-sm-1200;
 }
 
 .glassy-bg[fill="purple"] {
-
   background-color: rgba(15, 3, 36, 0.5);
 }
 
@@ -131,50 +103,4 @@ body {
 
 .round {
   border-radius: 30px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width:1400px) {
-  .h-large {
-    font-size: var(--display-large-576);
-    font-weight: var(--heavy-576);
-    line-height: var(--large-line-height-576);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .h-large {
-    font-size: var(--display-small-0);
-    font-weight: var(--heavy-0);
-    line-height: var(--small-line-height-0);
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .h-large {
-    font-size: var(--h1-0);
-    line-height: var(--h1-line-height-0);
-  }
-}
-
-
-@media screen and (min-width: 1280px) {
-
-  .glassy-bg[fill="blue"],
-  .glassy-bg[fill="purple"] {
-    background-color: unset;
-  }
 }

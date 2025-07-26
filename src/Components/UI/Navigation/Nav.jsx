@@ -1,22 +1,22 @@
 import React from "react";
-import classes from "./Nav.module.css";
 import { NavLink, useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 const Nav = ({ children, className }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, translateY: "-100px" }}
-      animate={{ opacity: 1, translateY: 0 }}
-      exit={{ opacity: 0, translateY: "-100px" }}
-      className="flex justify-center absolute top-0 max-lg:pt-0 pt-10 w-full z-50"
-    >
-      <nav
-        className={`${classes.nav} ${className || ""}
-         flex justify-between items-center rounded-full`}
+    <div className="relative overflow-hidden w-full">
+      <motion.div
+        initial={{ opacity: 0, translateY: "-100px" }}
+        animate={{ opacity: 1, translateY: 0 }}
+        exit={{ opacity: 0, translateY: "-100px" }}
+        className="fixed bg-secondary-10/50 w-full z-10"
       >
-        {children}
-      </nav>
-    </motion.div>
+          <nav
+            className={`${className || ""} md:container flex justify-between mx-auto items-center`}
+          >
+            {children}
+          </nav>
+      </motion.div>
+    </div>
   );
 };
 Nav.Header = ({ children, className, ...props }) => {
@@ -24,7 +24,10 @@ Nav.Header = ({ children, className, ...props }) => {
 };
 Nav.Heading = ({ children, className, ...props }) => {
   return (
-    <h3 className={`${classes.heading} ${className || ""}`} {...props}>
+    <h3
+      className={`${className || ""} text-white lg:text-h4-576 font-heavy-576 text-base font-["Source Sans 3", sans-serif]`}
+      {...props}
+    >
       {children}
     </h3>
   );
@@ -51,22 +54,22 @@ Nav.Link = ({
   to,
   ...props
 }) => {
-  const { pathname } = useLocation();
   return (
-    <motion.li
-      whileHover={{ fontWeight: "var(--heavy-576)" }}
-      transition={{ type: "spring" }}
+    <li
       style={style}
       className="flex w-full"
     >
       <NavLink
         {...props}
         className={({ isActive, isPending }) =>
-          `${classes.lnk} ${
-            isActive
-              ? activeClass || classes.active
-              : isPending
-              ? pendingClass || classes.pending
+          `text-white font-normal 
+        max-md:hover:bg-secondary-7 md:text-lnk-md md:font-heavy-0 
+        md:hover:text-secondary-7 
+        transition-colors text-lnk-md ease-linear duration-150
+         ${isActive
+            ? activeClass || "md:!text-primary-6 max-md:!bg-primary-6 font-heavy-576"
+            : isPending
+              ? pendingClass || ""
               : ""
           } 
           ${className || ""} w-full px-4 py-2`
@@ -76,7 +79,7 @@ Nav.Link = ({
       >
         {children}
       </NavLink>
-    </motion.li>
+    </li>
   );
 };
 

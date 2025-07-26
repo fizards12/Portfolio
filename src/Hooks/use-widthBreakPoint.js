@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
 const useWidthBreakPoint = (breakPoint) => {
-  const [isInSize, setIsSized] = useState(true);
+  const currentWidth = window.innerWidth;
+  const [isInSize, setIsSized] = useState(+currentWidth <= +breakPoint);
   useEffect(() => {
     const checkIsSized = () => {
       const currentWidth = window.innerWidth;

@@ -2,7 +2,7 @@ import React from "react";
 import { FaReact } from "react-icons/fa";
 import { SiRedux, SiAxios, SiMongodb } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { animate, motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const variants = {
   hidden: {
@@ -33,8 +33,7 @@ const IconsList = () => {
         animate="visible"
         exit="hidden"
         transition={{ staggerChildren: 0.5, delayChildren: 1.5 }}
-        style={{ color: "var(--purple-7)" }}
-        className="flex justify-between list-none py-5 w-2/3 max-w-6xl min-w-56"
+        className="flex text-primary-7 justify-between list-none py-5 w-2/3 max-w-6xl min-w-56"
       >
         {iconsList.map(({ id, Icon }) => (
           <motion.li

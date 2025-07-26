@@ -1,0 +1,13 @@
+.sec-heading h2 {
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(142deg, #FE315D 22.31%, #F63462 26.22%, #DF3A71 32.08%, #C24383 38.91%, #AD4A91 50.63%, #755BB4 76.02%, #1D76ED 112.15%, #087CFA 119.97%);
+    @apply bg-clip-text text-fill-transparent bg-gradient-to-r from-pink-500 to-blue-500;
+}
+
+.sec-heading h1{
+    font-size: 100px;
+    color: var(--purple-8-5);
+    font-weight: var(--heavy-1200);
+}
