@@ -75,8 +75,15 @@ body {
 }
 
 body {
-  @apply bg-primary-9;
+  @apply bg-primary-9 text-white;
 }
+
+p,span,div,i,li {
+  font-size: 1.2rem; /* Default font size */
+  font-weight: 400;
+  line-height: 1.5;
+}
+
 
 .isolate {
   isolation: isolate;

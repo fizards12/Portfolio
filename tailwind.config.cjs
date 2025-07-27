@@ -119,6 +119,18 @@ export default {
             lineHeight: "20px",
           },
         ],
+        "small": [
+          "16px",
+          {
+            lineHeight: "24px",
+          }
+        ],
+        "large": [
+          "24px",
+          {
+            lineHeight: "32px",
+          }
+        ],
       },
       colors: {
         primary: {

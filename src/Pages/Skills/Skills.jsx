@@ -1,8 +1,8 @@
 import React from 'react'
 import Layout from '../../Components/UI/Layout/Layout'
 import SkillsImage from '../../assets/hero_bg/skills-bg.png'
-import { FaJsSquare, FaNodeJs } from 'react-icons/fa'
-import { SiDaisyui, SiExpress, SiMongodb, SiMui, SiReactrouter, SiTypescript } from 'react-icons/si'
+import { FaGithub, FaJsSquare, FaNodeJs } from 'react-icons/fa'
+import { SiAxios, SiDaisyui, SiExpress, SiFramer, SiJest, SiMongodb, SiMui, SiReactrouter, SiTypescript } from 'react-icons/si'
 import { FaBootstrap, FaCss3Alt, FaHtml5, FaReact } from 'react-icons/fa6'
 import { RiVuejsFill } from 'react-icons/ri'
 import { GiPineapple } from 'react-icons/gi'
@@ -159,6 +159,47 @@ const skillsSections = [
           degree: '400'
         },
         Icon: SiMongodb
+      },
+    ]
+  },
+  {
+    title: "Tools & LIB",
+    skills: [
+      {
+        title: "JestJS",
+        level: 5,
+        Icon: SiJest,
+        color: {
+          color: 'red',
+          degree: '700'
+        }
+      },
+      {
+        title: "Axios",
+        level: 5,
+        color: {
+          color: 'neutral',
+          degree: '300'
+        },
+        Icon: SiAxios
+      },
+      {
+        title: "Github",
+        level: 5,
+        color: {
+          color: 'neutral',
+          degree: '900'
+        },
+        Icon: FaGithub
+      },
+      {
+        title: "Framer Motion",
+        level: 5,
+        color: {
+          color: 'blue',
+          degree: '700'
+        },
+        Icon: SiFramer
       },
     ]
   },
