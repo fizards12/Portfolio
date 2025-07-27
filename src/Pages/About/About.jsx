@@ -10,6 +10,7 @@ import professionalCert from "../../assets/certifcates/Professional.PNG";
 import bachelorCert from "../../assets/certifcates/Bachelor.jpg";
 import { createPortal } from "react-dom";
 import CertModal from "../../Components/About/CertModal";
+import ExperienceItem from "../../Components/About/ExperienceItem";
 const mystory = {
   description: 'My Name is Mahmoud Sameh. A Communication and Electronics Engineer and fresh Full-Stack Web Developer with experience as front-end developer. I , and I finished Reactjs Course that on MaharaTech, the three courses of Web Development track introduced by FWD, and finished Codevolution playlists of React, React Hooks, and React Router.',
   skills: [
@@ -29,6 +30,48 @@ const certifcates = [
   {
     cert: professionalCert,
     name: "Professional Web Development",
+  },
+]
+
+const experience = [
+  {
+    role: "Frontend Developer – Spheremail (Part Time)",
+    duration: {
+      start: "04/2025",
+      end: "Present"
+    },
+    responsibilities: [
+      "Working on SaaS Virtual Mailbox platform that provide a dashboard for Mail Receiving Agencies (CMRAs) to handle their customers’ mailboxes and also for their customers to handle their mail items.",
+      "Maintaining the front-end architecture for the application using VueJs framework, and other applicationsbelongs to the company.",
+      "Actively participated in cross-functional teams, collaborating with backend developers to refine API endpointsand align user interface behavior with backend logic, and collaborate with Test Developers to deliver newfeatures with free bugs.",
+      "update and deploy features to production that was developed by past frontend developers but was postponed for awhile."
+    ]
+  },
+  {
+    role: "Frontend Developer – ensoulify (Part Time)",
+    duration: {
+      start: "12/2024",
+      end: "03/2025"
+    },
+    responsibilities: [
+      "Working on Full-Stack SaaS ERP System for Invoice and Receipt Management that facilitates dealing with Egyptian Tax Authority (ETA-SDK), and provides a AI-Powered GPC search.",
+      "maintaining the front-end architecture for the application using VueJs framework.",
+      "Collaborating closely with backend developers to optimize API interactions and enhancing user experience",
+      "Translating Figma designs into high-quality, responsive front-end components achieving pixel-perfect accuracy."
+    ]
+  },
+  {
+    role: "Front-end Developer Intern - ensoulify",
+    duration: {
+      start: "06/2024",
+      end: "11/2024"
+    },
+    responsibilities: [
+      "Working on Full-Stack SaaS ERP System for Invoice and Receipt Management that facilitates dealing with Egyptian Tax Authority (ETA-SDK), and provides a AI-Powered GPC search.",
+      "maintaining the front-end architecture for the application using VueJs framework.",
+      "Collaborating closely with backend developers to optimize API interactions and enhancing user experience",
+      "Translating Figma designs into high-quality, responsive front-end components achieving pixel-perfect accuracy."
+    ]
   },
 ]
 
@@ -54,34 +97,38 @@ const About = () => {
         title={"About"}
         className={`font-heavy-1200 uppercase text-primary-2`}
       />
-      <Layout.Body className="overflow-hidden container">
+      <Layout.Body className="overflow-hidden *:container *:mx-auto">
         <Section>
           <Heading title={"my story"} />
-          <Content className={`flex tracking-widest flex-col bg-primary-10/40 rounded-lg p-10 text-secondary-2 max-w-screen-lg mx-auto gap-4`}
+          <Content className={`flex max-md:flex-col max-[540px]:text-sm tracking-wide bg-primary-10/40 rounded-lg p-10 text-secondary-2 max-w-screen-lg mx-auto gap-4`}
             {...contentAnimation}
           >
-            <div className={`font-heavy-576 flex-1 flex`}>
-              <div className="size-52 overflow-hidden">
-                <img src={Myface} alt="Mahmoud Sameh" className="w-full h-fit" />
-              </div>
-              <p className="flex-1">
+            <div className="size-52 mx-auto overflow-hidden rounded-full bg-secondary-8/20">
+              <img src={Myface} alt="Mahmoud Sameh" className="w-full h-fit" />
+            </div>
+            <div className={`font-heavy-576 flex-1 flex flex-col gap-4`}>
+              <p>
                 {mystory.description}
               </p>
-            </div>
-            <div className="flex flex-wrap gap-8">
-              {mystory.skills.map((skill) => (
-                <StoryCards key={skill.title} skill={skill} />
-              ))}
+              <div className="flex flex-wrap gap-8">
+                {mystory.skills.map((skill) => (
+                  <StoryCards key={skill.title} skill={skill} />
+                ))}
+              </div>
             </div>
           </Content>
         </Section>
-        <Section>
+        <Section className="">
           <Heading title={"Experience"} />
-          <Content {...contentAnimation} className={`flex flex-col max-w-screen-lg mx-auto gap-4`}>
-            <div className="text-2xl font-heavy-576 max-h-max w-full p-5 bg-white rounded-2xl text-center">
-              <p>
-                I have experience in web development, including React, Node.js, and MongoDB. I have worked on various projects, including personal and collaborative ones.
-              </p>
+          <Content {...contentAnimation} className={`flex flex-col gap-4`}>
+            <div className="rounded-lg p-10 text-secondary-2 flex flex-col gap-8">
+              {experience.map((exp, index) => (
+                <div key={index} className={`flex ${index % 2 === 0 ? "justify-start" : "justify-end"}`}>
+                  <div className="bg-secondary-10/50 rounded-lg p-5 max-w-screen-md transition-transform duration-300 hover:scale-105">
+                    <ExperienceItem experience={exp} />
+                  </div>
+                </div>
+              ))}
             </div>
           </Content>
         </Section>

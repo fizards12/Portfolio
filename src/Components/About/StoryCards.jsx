@@ -7,7 +7,7 @@ function StoryCards({ skill }) {
                 <div>
                     <skill.icon className="size-7" />
                 </div>
-                <span className='text-small'>{skill.text}</span>
+                <span>{skill.text}</span>
             </div>
         </div>
     )
