@@ -22,7 +22,7 @@
 @layer components {
 
   .btn {
-    @apply px-8 py-4 rounded-md font-heavy-576 cursor-pointer;
+    @apply px-8 py-4 rounded-md text-lnk-md h-14 font-heavy-576 cursor-pointer;
   }
   .btn-lg {
     @apply px-8 py-4 text-lnk-lg;
@@ -60,6 +60,10 @@
   
   .btn-text:hover {
     @apply bg-transparent;
+  }
+
+  .input-md,.textarea-md {
+    font-size: inherit;
   }
 }
 

@@ -1,12 +1,27 @@
 import React, { forwardRef } from "react";
 import { motion } from "motion/react";
-
+const selectColor = (color) => {
+  switch (color) {
+    case "primary":
+      return "btn-primary";
+    case "secondary":
+      return "btn-secondary";
+    case "accent":
+      return "btn-accent";
+    case "ghost":
+      return "btn-ghost";
+    case "error":
+      return "btn-error";
+    default:
+      return "btn-primary";
+  }
+}
 const Button = forwardRef(
   (
-    { children, whileHover, mode = "fill", className, ...props },
+    { children, whileHover, mode = "fill", color="primary", className, ...props },
     ref
   ) => {
-    let btnClassName = `btn btn-primary ${className || ""}`;
+    let btnClassName = `btn ${selectColor(color)} ${className || ""}`;
     if(mode === "outline") {
       btnClassName = `btn btn-outline ${btnClassName || ""}`
     } else if(mode === "text"){

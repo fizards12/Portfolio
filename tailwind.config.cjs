@@ -195,6 +195,7 @@ export default {
           "secondary-content": "#FFF",
           accent: "#35A7FF",
           "accent-content": "#FFF",
+          error: "#EF4444",
         },
       },
     ],

@@ -100,13 +100,13 @@ const About = () => {
       <Layout.Body className="overflow-hidden *:container *:mx-auto">
         <Section>
           <Heading title={"my story"} />
-          <Content className={`flex max-md:flex-col max-[540px]:text-sm tracking-wide bg-primary-10/40 rounded-lg p-10 text-secondary-2 max-w-screen-lg mx-auto gap-4`}
+          <Content className={`flex max-md:flex-col tracking-wide bg-primary-10/40 rounded-lg p-10 text-secondary-2 max-w-screen-lg mx-auto gap-4`}
             {...contentAnimation}
           >
             <div className="size-52 mx-auto overflow-hidden rounded-full bg-secondary-8/20">
               <img src={Myface} alt="Mahmoud Sameh" className="w-full h-fit" />
             </div>
-            <div className={`font-heavy-576 flex-1 flex flex-col gap-4`}>
+            <div className={`flex-1 flex flex-col gap-4`}>
               <p>
                 {mystory.description}
               </p>
@@ -121,7 +121,7 @@ const About = () => {
         <Section className="">
           <Heading title={"Experience"} />
           <Content {...contentAnimation} className={`flex flex-col gap-4`}>
-            <div className="rounded-lg p-10 text-secondary-2 flex flex-col gap-8">
+            <div className="rounded-lg p-10 max-sm:px-0 text-secondary-2 flex flex-col gap-8">
               {experience.map((exp, index) => (
                 <div key={index} className={`flex ${index % 2 === 0 ? "justify-start" : "justify-end"}`}>
                   <div className="bg-secondary-10/50 rounded-lg p-5 max-w-screen-md transition-transform duration-300 hover:scale-105">

@@ -8,7 +8,9 @@ import useWidthBreakPoint from "../../../Hooks/use-widthBreakPoint";
 import { createPortal } from "react-dom";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { AnimatePresence } from "motion/react";
+import { useStore } from "../../../store";
 const Navigation = ({ onShow }) => {
+  const openContactModal = useStore((state) => state.handleContactModal); 
   return (
     <>
       <Nav className={`px-6 py-3 max-md:pb-6 gap-5 max-md:flex-col max-md:px-0`}>
@@ -54,7 +56,7 @@ const Navigation = ({ onShow }) => {
             Testimontials
           </Nav.Link>
         </Nav.NavLinks>
-        <Button className={"rounded-full btn btn-md"}>Let's Talk</Button>
+        <Button className={"rounded-full btn btn-md"} onClick={()=>openContactModal(true)}>Let's Talk</Button>
       </Nav>
     </>
   );
